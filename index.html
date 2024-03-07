@@ -30,6 +30,12 @@
 
 </head>
 <style>
+
+@media (max-width: 768px) {
+        .center-button {
+            margin-left: 30%;
+        }
+    }
     @media (max-width: 768px) {
 
         /* For screens smaller than 768px (mobile devices), stack in a column layout */
@@ -424,8 +430,7 @@
                                     </div>
                                     <div class="content">
                                         <p class="description" style="margin-top: 20px;">
-                                            Goals defined by NEP
-                                            (NATIONAL EDUCATION POLICY, INDIA)
+                                            Goals defined by NEP (NATIONAL EDUCATION <br /> POLICY, INDIA)
                                         </p>
                                     </div>
                                 </div>
@@ -454,23 +459,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="read-more-btn" style="display: flex; justify-content: center;">
-                    <div class="read-more-btn" style="display: flex; justify-content: center;">
-                        <button id="registerButton" class="read-more-btn" data-sal-delay="350" data-sal="slide-up"
-                            data-sal-duration="800"
-                            style="background-color: #525FE1; color: white; width: 220px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; border-radius: 5px; border: none; cursor: pointer;">
-                            <div class="inner" style="display: flex; align-items: center;">
-                                <div class="name">
-                                    Register
+                <div class="center-button" style="display: flex; justify-content: center;">
+                    <a style="color: white">
+                        <button id="openFormBtn" class="read-more-btn bounce-slide"
+                            data-sal-delay="350" data-sal="slide-up" data-sal-duration="800"
+                            style="background-color: #525FE1; color: white; width: 200px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: none; cursor: pointer;">
+                            <div class="card-info" style="display: flex; align-items: center;">
+                                <div class="name" style=" margin-right: 10px;">Register
                                     <span>Now</span>
                                 </div>
-                                <div class="rating-wrapper d-flex" style="margin-left: auto;">
-                                    <i class="icon-arrow-right-line-right" style="margin-top: 3px; margin-left: 10px;"></i>
+                                <div class="rating-wrapper d-flex" style="margin-left: 10px;">
+                                    <i class="icon-arrow-right-line-right" style="margin-top: 10px;"></i>
                                 </div>
                             </div>
                         </button>
-                    </div>
+                    </a>
                 </div>
+
+                                    <!-- <div class="center-button" style="display: flex; justify-content: center;">
+                                        <a style="color: white">
+                                            <button id="openFormBtn" class="read-more-btn bounce-slide"
+                                                data-sal-delay="350" data-sal="slide-up" data-sal-duration="800"
+                                                style="background-color: #525FE1; color: white; width: 220px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: none; cursor: pointer;">
+                                                <div class="card-info" style="display: flex; align-items: center;">
+                                                    <div class="name" style=" margin-right: 10px;">Register
+                                                        <span>Now</span></div>
+                                                    <div class="rating-wrapper d-flex" style="margin-left: 10px;">
+                                                        <i class="icon-arrow-right-line-right"
+                                                            style="margin-top: 10px;"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </a>
+                                    </div> -->
 
                 <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
                     <div class="shape-image shape-image-1">
@@ -1138,41 +1159,52 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <script>
-        // Function to open the popup form
-        function openForm() {
-            document.getElementById("popupForm").style.display = "block";
-            document.getElementById("overlay").style.display = "block";
-        }
+      // Function to open the popup form
+function openForm() {
+    document.getElementById("popupForm").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
 
-        // Function to close the popup form
-        function closeForm() {
-        document.getElementById("popupForm").style.display = "none";
+    // Restore form data if available
+    var formData = JSON.parse(localStorage.getItem("formData"));
+    if (formData) {
+        document.getElementById("name").value = formData.name || "";
+        document.getElementById("contactNumber").value = formData.contactNumber || "";
+        document.getElementById("emailAddress").value = formData.emailAddress || "";
     }
-    
+}
 
-    function submitForm(event) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
+// Function to close the popup form
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
 
-        // Your additional form submission logic goes here
-        // For example, you can submit the form using JavaScript:
-        document.querySelector("#popupForm form").submit();
-        window.location.href = "thank-you.html";
-    }
+// Function to submit the form
+function submitForm(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
 
-       // Event listener for the Register Now button
-       document.getElementById("registerButton").addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        openForm(); // Open the popup form
-    });
-    document.getElementById("registerButton").addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        openForm(); // Open the popup form
-    });
-    
+    // Save form data to local storage
+    var formData = {
+        name: document.getElementById("name").value,
+        contactNumber: document.getElementById("contactNumber").value,
+        emailAddress: document.getElementById("emailAddress").value
+    };
+    localStorage.setItem("formData", JSON.stringify(formData));
 
-        // Event listener for the button click
-        document.getElementById("openFormBtn").addEventListener("click", openForm);
+    // Submit the form
+    document.querySelector("#popupForm form").submit();
+    window.location.href = "thank-you.html";
+}
+
+// Event listener for the Register Now button
+document.getElementById("registerButton").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    openForm(); // Open the popup form
+});
+
+// Event listener for the button click
+document.getElementById("openFormBtn").addEventListener("click", openForm);
+
     </script>
 </body>
 
