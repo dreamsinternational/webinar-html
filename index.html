@@ -30,12 +30,6 @@
 
 </head>
 <style>
-
-@media (max-width: 768px) {
-        .center-button {
-            margin-left: 30%;
-        }
-    }
     @media (max-width: 768px) {
 
         /* For screens smaller than 768px (mobile devices), stack in a column layout */
@@ -102,6 +96,14 @@
             margin-top: -100px !important;
         }
     }
+
+    @media (max-width: 768px) {
+    .popup-form {
+        width: 350px; /* Set the width to 300px for mobile devices */
+        margin-left: auto; /* Center the form horizontally */
+        margin-right: auto;
+    }
+}
 
 
     .popup-form {
@@ -430,7 +432,8 @@
                                     </div>
                                     <div class="content">
                                         <p class="description" style="margin-top: 20px;">
-                                            Goals defined by NEP (NATIONAL EDUCATION <br /> POLICY, INDIA)
+                                            Goals defined by NEP
+                                            (NATIONAL EDUCATION POLICY, INDIA)
                                         </p>
                                     </div>
                                 </div>
@@ -459,39 +462,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="center-button" style="display: flex; justify-content: center;">
-                    <a style="color: white">
-                        <button id="openFormBtn" class="read-more-btn bounce-slide"
-                            data-sal-delay="350" data-sal="slide-up" data-sal-duration="800"
-                            style="background-color: #525FE1; color: white; width: 200px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: none; cursor: pointer;">
-                            <div class="card-info" style="display: flex; align-items: center;">
-                                <div class="name" style=" margin-right: 10px;">Register
+                <div class="read-more-btn" style="display: flex; justify-content: center;">
+                    <a style="color: white; text-decoration: none;">
+                        <button id="openFormBtn1" class="read-more-btn" data-sal-delay="350" data-sal="slide-up"
+                            data-sal-duration="800"
+                            style="background-color: #525FE1; color: white; width: 200px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; border-radius: 5px; border: none; cursor: pointer;">
+                            <div class="inner" style="display: flex; align-items: center;">
+                                <div class="name">
+                                    Register
                                     <span>Now</span>
                                 </div>
-                                <div class="rating-wrapper d-flex" style="margin-left: 10px;">
-                                    <i class="icon-arrow-right-line-right" style="margin-top: 10px;"></i>
+                                <div class="rating-wrapper d-flex" style="margin-left: auto;">
+                                    <i class="icon-arrow-right-line-right" style="margin-top: 3px; margin-left: 10px;"></i>
                                 </div>
                             </div>
                         </button>
                     </a>
                 </div>
-
-                                    <!-- <div class="center-button" style="display: flex; justify-content: center;">
-                                        <a style="color: white">
-                                            <button id="openFormBtn" class="read-more-btn bounce-slide"
-                                                data-sal-delay="350" data-sal="slide-up" data-sal-duration="800"
-                                                style="background-color: #525FE1; color: white; width: 220px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; justify-content: center; border-radius: 5px; border: none; cursor: pointer;">
-                                                <div class="card-info" style="display: flex; align-items: center;">
-                                                    <div class="name" style=" margin-right: 10px;">Register
-                                                        <span>Now</span></div>
-                                                    <div class="rating-wrapper d-flex" style="margin-left: 10px;">
-                                                        <i class="icon-arrow-right-line-right"
-                                                            style="margin-top: 10px;"></i>
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </a>
-                                    </div> -->
+                
 
                 <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
                     <div class="shape-image shape-image-1">
@@ -1098,11 +1086,12 @@
                 </div>
             </div>
         </div> -->
-        <div id="popupForm" class="popup-form">
-            <span class="close-btn" onclick="closeForm()">&times;</span>
+        <div id="popupForm" class="popup-form" style="background-color: #525FE1; display: none;">
+            <span   onclick="closeForm()" style="color: white; float: right; cursor: pointer;">&times;</span>
             <form action="submit_registration.php" method="post">
                 <div class="inner text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+                    <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
+                        data-sal-duration="800">
                         <h3 class="title text-center" style="margin-top: 105px;">Registration Form</h3>
                     </div>
                     <div class="newsletter-form newsletter-form-style-1 mt--60 mt_md--30 mt_sm--30 position-relative"
@@ -1123,7 +1112,7 @@
                                 style="padding-left: 50px; background-image: url('assets/images/banner/mail\ -\ 01.jpg'); background-repeat: no-repeat; background-position: 10px center;">
                         </div>
                     </div>
-                    <button class="edu-btn" style="margin-top: -20px;" onclick="submitForm(event)">Enroll Now<i
+                    <button class="edu-btn" style="margin-top: -20px; background-color: white; color: #525FE1; margin-bottom: 30px;" onclick="submitForm(event)">Enroll Now<i
                             class="icon-arrow-right-line-right"></i></button>
                 </div>
             </form>
@@ -1159,52 +1148,37 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <script>
-      // Function to open the popup form
-function openForm() {
-    document.getElementById("popupForm").style.display = "block";
-    document.getElementById("overlay").style.display = "block";
+        // Function to open the popup form
+        function openForm() {
+            document.getElementById("popupForm").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
+        }
 
-    // Restore form data if available
-    var formData = JSON.parse(localStorage.getItem("formData"));
-    if (formData) {
-        document.getElementById("name").value = formData.name || "";
-        document.getElementById("contactNumber").value = formData.contactNumber || "";
-        document.getElementById("emailAddress").value = formData.emailAddress || "";
+        // Function to close the popup form
+        function closeForm() {
+        document.getElementById("popupForm").style.display = "none";
+        window.location.reload();
     }
-}
 
-// Function to close the popup form
-function closeForm() {
-    document.getElementById("popupForm").style.display = "none";
-}
+    function submitForm(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
 
-// Function to submit the form
-function submitForm(event) {
-    // Prevent the default form submission behavior
-    event.preventDefault();
+        // Your additional form submission logic goes here
+        // For example, you can submit the form using JavaScript:
+        document.querySelector("#popupForm form").submit();
+        window.location.href = "thank-you.html";
+    }
 
-    // Save form data to local storage
-    var formData = {
-        name: document.getElementById("name").value,
-        contactNumber: document.getElementById("contactNumber").value,
-        emailAddress: document.getElementById("emailAddress").value
-    };
-    localStorage.setItem("formData", JSON.stringify(formData));
+       // Event listener for the Register Now button
+       document.getElementById("registerButton").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        openForm(); // Open the popup form
+    });
 
-    // Submit the form
-    document.querySelector("#popupForm form").submit();
-    window.location.href = "thank-you.html";
-}
-
-// Event listener for the Register Now button
-document.getElementById("registerButton").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    openForm(); // Open the popup form
-});
-
-// Event listener for the button click
-document.getElementById("openFormBtn").addEventListener("click", openForm);
-
+        // Event listener for the button click
+        document.getElementById("openFormBtn").addEventListener("click", openForm);
+        document.getElementById("openFormBtn1").addEventListener("click", openForm);
     </script>
 </body>
 
