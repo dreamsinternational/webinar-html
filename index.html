@@ -107,6 +107,13 @@
         }
     }
 
+    @media (max-width: 768px) {
+        /* Mobile responsive styles */
+        .edu-btn {
+            margin-right: 0;
+        }
+    }
+
 
     .popup-form {
         display: none;
@@ -603,8 +610,8 @@
         </div>
 
         <!-- Start Accordion Area -->
-        <div class="edu-accordion-area eduvibe-home-three-accordion accordion-shape-1 edu-section-gap bg-color-secondary-altsecondary-alt"
-            style="margin-top: -70px; background-color:  #FFF0E6;">
+        <div class="edu-accordion-area eduvibe-home-three-accordion accordion-shape-1 edu-section-gap "
+            style="margin-top: -70px; background-color:  #A7D9FE;">
             <div class="container eduvibe-animated-shape">
                 <div class="row g-5" style="margin-top: -100px;">
                     <div class="col-lg-6 gallery-wrapper">
@@ -1088,7 +1095,7 @@
                 </div>
             </div>
         </div> -->
-        <div id="popupForm" class="popup-form" style="background-color:  #005A9C; display: none; height: 450px;">
+        <div id="popupForm" class="popup-form" style="background-color:  #005A9C; display: none; height: 550px;">
             <span onclick="closeForm()" style="color: white; float: right; cursor: pointer;">&times;</span>
             <form action="submit_registration.php" method="post">
                 <div class="inner text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
@@ -1118,7 +1125,7 @@
         
                     </div>
                     <div style="text-align: right;">
-                        <button class="edu-btn" style="height: 50px; background-color: white; color:  #005A9C; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; margin-left: auto;" onclick="submitForm(event)">
+                        <button class="edu-btn" style="height: 50px; background-color: white; color:  #005A9C; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; margin-left: auto; margin-left: 80px;" onclick="submitForm(event)">
                             Enroll Now
                             <i class="icon-arrow-right-line-right"></i>
                         </button>
@@ -1126,6 +1133,7 @@
                 </div>
             </form>
         </div>
+        
         
 
 
