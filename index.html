@@ -27,21 +27,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-XjfvVqJaKQ2+u0B6L8YfJtoBMEuCkNNw6x5xcwSxchE49J7FZ8+9BwDPFkMHpEBlvDhRklgbG9S3JvMgE2rKfQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script>
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
+
+    <!-- google pixel -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNVRJYW4BX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-GNVRJYW4BX');
+    </script>
+    <!-- facebook pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1331061287784218');
-            fbq('track', 'PageView');
+        fbq('init', '1331061287784218');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1331061287784218&ev=PageView&noscript=1" /></noscript>
+
+            <!-- Microsoft Clarity -->
+            <script type="text/javascript">
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "ldcoxcq5fe");
             </script>
-            <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1331061287784218&ev=PageView&noscript=1"
-            /></noscript>
 </head>
 <style>
     @media (max-width: 768px) {
@@ -141,30 +162,36 @@
             margin-bottom: 100px;
         }
     }
+
     @media (max-width: 600px) {
-    #webinarText {
-        font-size: 16px;
-        display: inline-block;
-        width: calc(100% - 35px); /* Adjust as needed based on the size of the icon and margin */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        #webinarText {
+            font-size: 16px;
+            display: inline-block;
+            width: calc(100% - 35px);
+            /* Adjust as needed based on the size of the icon and margin */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
-}
-@media (max-width: 767px) {
-    .gallery-wrapper {
-        display: flex;
-        justify-content: center;
+
+    @media (max-width: 767px) {
+        .gallery-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-1 {
+            max-width: 70%;
+            /* Adjust the width as needed */
+        }
     }
-    .image-1 {
-        max-width: 70%; /* Adjust the width as needed */
+
+    @media (max-width: 767px) {
+        .inner {
+            margin-top: -10px;
+        }
     }
-}
-@media (max-width: 767px) {
-    .inner {
-        margin-top: -10px;
-    }
-}
 
 
     .popup-form {
@@ -210,8 +237,9 @@
                     <div style="align-items: center; justify-content: center;">
                         <div class="col-lg-12 order-2 order-lg-1" style="margin-top: 10px;">
                             <div class="inner pt-30 pt_md--0 pt_sm--0">
-                                <div class="content text-center" style="display: flex; flex-direction: column; align-items: center;">
-                                   <img class="logo-light" src="assets/images/logo/logo-3.png" alt="Site Logo">
+                                <div class="content text-center"
+                                    style="display: flex; flex-direction: column; align-items: center;">
+                                    <img class="logo-light" src="assets/images/logo/logo-3.png" alt="Site Logo">
                                     <h1 class="title" style="font-size: 30px;" data-sal-delay="150" data-sal="slide-up"
                                         data-sal-duration="800">
                                         Attention, Early Years Enthusiasts!
@@ -255,28 +283,33 @@
                                                 style="margin-left: 50px; margin-right: 10px; color: #005A9C;"></i> 22nd
                                             March, Friday
                                         </div>
-                                        <div style="width: 100%; height: auto; display: flex; align-items: center; justify-content: center; margin-top: 10px; background-color:#ffff; border-radius: 20px; padding: 10px;">
-                                            <i class="bi bi-stopwatch" style="margin-right: 10px; color: #005A9C; flex-shrink: 0;"></i>
-                                            <span id="webinarText" style="font-size: 18px; color: black;">90 Minutes Webinar + 30 Minutes Q&A</span>
+                                        <div
+                                            style="width: 100%; height: auto; display: flex; align-items: center; justify-content: center; margin-top: 10px; background-color:#ffff; border-radius: 20px; padding: 10px;">
+                                            <i class="bi bi-stopwatch"
+                                                style="margin-right: 10px; color: #005A9C; flex-shrink: 0;"></i>
+                                            <span id="webinarText" style="font-size: 18px; color: black;">90 Minutes
+                                                Webinar + 30 Minutes Q&A</span>
                                         </div>
-                                        
+
                                         <div
                                             style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black;  border-radius: 20px; line-height: 42px; background-color:#ffff;">
                                             <i class="bi bi-broadcast" style="margin-right: 10px; color: #005A9C;"></i>
                                             LIVE Webinar
                                         </div>
                                         <div
-                                        style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black; border-radius: 20px; line-height: 42px; background-color:#ffff;">
-                                        <i class="bi bi-clipboard2-fill" style="margin-left: 40px; margin-right: 10px; color: #005A9C;"></i>
-                                        Certified Program
-                                    </div>
+                                            style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black; border-radius: 20px; line-height: 42px; background-color:#ffff;">
+                                            <i class="bi bi-clipboard2-fill"
+                                                style="margin-left: 40px; margin-right: 10px; color: #005A9C;"></i>
+                                            Certified Program
+                                        </div>
                                         <div
                                             style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black; border-radius: 20px; line-height: 42px; background-color:#ffff;">
-                                            <i class="bi bi-person" style="margin-left: 12px; margin-right: 10px; color: #005A9C;"></i>
+                                            <i class="bi bi-person"
+                                                style="margin-left: 12px; margin-right: 10px; color: #005A9C;"></i>
                                             Instructed by
                                         </div>
 
-                                        
+
 
 
                                         <div class="row" style="margin-top: 20px; margin-left: 10px;">
@@ -711,7 +744,8 @@
                                             <div class="edu-accordion-header" id="headingTwo">
                                                 <button class="edu-accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo" style="padding-right: 20px;">
+                                                    aria-expanded="false" aria-controls="collapseTwo"
+                                                    style="padding-right: 20px;">
                                                     2. How can I access the webinar, and is there a cost associated with
                                                     it?
                                                 </button>
@@ -724,7 +758,9 @@
                                                     LIVE webinar on zoom. You can register for the webinar on our
                                                     website or by
                                                     reaching out to us, and there may be a nominal fee associated with
-                                                    registration. It is also necessary to register/ signup yourselves on zoom before the webinar, so that you do not face any issues to join the webinar.
+                                                    registration. It is also necessary to register/ signup yourselves on
+                                                    zoom before the webinar, so that you do not face any issues to join
+                                                    the webinar.
                                                 </div>
                                             </div>
                                         </div>
@@ -733,7 +769,8 @@
                                             <div class="edu-accordion-header" id="headingThree">
                                                 <button class="edu-accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree" style="padding-right: 20px;">
+                                                    aria-expanded="false" aria-controls="collapseThree"
+                                                    style="padding-right: 20px;">
                                                     3. I am new to teaching and literacy instruction, will this webinar
                                                     be
                                                     suitable for me?
@@ -754,7 +791,8 @@
                                             <div class="edu-accordion-header" id="headingFour">
                                                 <button class="edu-accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour" style="padding-right: 20px;">
+                                                    aria-expanded="false" aria-controls="collapseFour"
+                                                    style="padding-right: 20px;">
                                                     4. I'm a parent interested in supporting my child's literacy
                                                     development at
                                                     home. Is this webinar relevant to me?
@@ -801,7 +839,8 @@
                                     <div class="edu-accordion-header" id="headingSix">
                                         <button class="edu-accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                                            aria-expanded="false" aria-controls="collapseSix" style="padding-right: 20px;">
+                                            aria-expanded="false" aria-controls="collapseSix"
+                                            style="padding-right: 20px;">
                                             6. If I have a question that wasn't addressed in the webinar. Is there an
                                             opportunity to ask the presenter follow-up questions?
                                         </button>
@@ -843,7 +882,8 @@
                                     <div class="edu-accordion-header" id="headingEight">
                                         <button class="edu-accordion-button collapsed" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseEight"
-                                            aria-expanded="false" aria-controls="collapseEight" style="padding-right: 20px;">
+                                            aria-expanded="false" aria-controls="collapseEight"
+                                            style="padding-right: 20px;">
                                             8. Are there any specific technology requirements for online courses?
                                         </button>
                                     </div>
@@ -851,7 +891,9 @@
                                         aria-labelledby="headingEight" data-bs-parent="#accordionExample1">
                                         <div class="edu-accordion-body">
                                             One needs to make sure they have a mobile, tablet, laptop, or a computer
-                                            with a stable internet connection in order to access the webinar. It is also necessary to register/ signup yourselves on zoom before the webinar, so that you do not face any issues to join the webinar.
+                                            with a stable internet connection in order to access the webinar. It is also
+                                            necessary to register/ signup yourselves on zoom before the webinar, so that
+                                            you do not face any issues to join the webinar.
                                         </div>
                                     </div>
                                 </div>
@@ -959,7 +1001,7 @@
                             <img class="image-1" src="assets/images/about/about-08/four.jpg" alt="About Images">
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-12 col-xl-6 mb--50">
                         <div class="edu-footer-widget">
                             <h3 class="widget-title" style="font-size: 30px;">About the Speaker-</h3>
