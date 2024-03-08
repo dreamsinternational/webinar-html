@@ -1234,6 +1234,11 @@
             <input type="hidden" name="billing_state" value="MH"/>
             <input type="hidden" name="billing_zip" value="411009"/>
             <input type="hidden" name="billing_country" value="India"/>
+            <input type="hidden" name="currency" value="INR" />
+            <input type="hidden" name="language" value="EN" />
+            <input type="hidden" name="redirect_url"  value="https://webinar.enarkuplift.in/success.php" />
+            <input type="hidden" name="cancel_url" value="https://webinar.enarkuplift.in/fail.php"/>
+            <input type="hidden" name="amount" value="1"/>
                 <div class="inner text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
@@ -1245,19 +1250,19 @@
                         style="margin-bottom: 20px;">
                         <div class="input-box text-start"
                             style="position: relative; margin-bottom: 20px; height: 50px; overflow: hidden; border-radius: 10px;">
-                            <input class="large-input-box" type="text" placeholder="Enter your name"
+                            <input class="large-input-box" type="text"   name="billing_name" placeholder="Enter your name"
                                 style="padding-left: 50px; background-image: url('assets/images/banner/man-01.png'); background-repeat: no-repeat; background-position: 10px center; height: 100%; ">
                         </div>
 
                         <div class="input-box text-start"
                             style="position: relative; margin-bottom: 20px; height: 50px; border-radius: 10px;">
-                            <input class="large-input-box" type="text" placeholder="Enter your contact number"
+                            <input class="large-input-box" type="text" name="billing_tel" placeholder="Enter your contact number"
                                 style="padding-left: 50px; background-image: url('assets/images/banner/contact-03.png'); background-repeat: no-repeat; background-position: 10px center; background-color: white; height: 100%;">
                         </div>
 
                         <div class="input-box text-start"
                             style="position: relative; height: 50px; border-radius: 10px; margin-bottom: 20px;">
-                            <input class="large-input-box" type="email" placeholder="Enter your mail address"
+                            <input class="large-input-box" type="email"   name="billing_email" placeholder="Enter your mail address"
                                 style="padding-left: 50px; background-image: url('assets/images/banner/mail\ -\ 02.png'); background-repeat: no-repeat; background-position: 10px center; height: 100%;">
                         </div>
 
