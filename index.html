@@ -137,6 +137,16 @@
         text-overflow: ellipsis;
     }
 }
+@media (max-width: 767px) {
+    .gallery-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .image-1 {
+        max-width: 70%; /* Adjust the width as needed */
+    }
+}
+
 
 
     .popup-form {
@@ -184,7 +194,7 @@
                             <div class="inner pt-30 pt_md--0 pt_sm--0">
                                 <div class="content text-center"
                                     style="display: flex; flex-direction: column; align-items: center;">
-                                    <img class="logo-light" src="assets/images/logo/logo-2.png" alt="Site Logo">
+                                    <img class="logo-light" src="assets/images/logo/logo-3.png" alt="Site Logo">
                                     <h1 class="title" style="font-size: 30px;" data-sal-delay="150" data-sal="slide-up"
                                         data-sal-duration="800">
                                         Attention, Early Years Enthusiasts!
@@ -225,7 +235,7 @@
                                         <div
                                             style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black;  border-radius: 20px; line-height: 42px; background-color:#ffff;">
                                             <i class="bi bi-calendar2-week-fill"
-                                                style="margin-right: 20px; color: #005A9C;"></i> 22th
+                                                style="margin-left: 50px; margin-right: 10px; color: #005A9C;"></i> 22th
                                             March, Friday
                                         </div>
                                         <div style="width: 100%; height: auto; display: flex; align-items: center; justify-content: center; margin-top: 10px; background-color:#ffff; border-radius: 20px; padding: 10px;">
@@ -239,10 +249,17 @@
                                             LIVE Webinar
                                         </div>
                                         <div
+                                        style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black; border-radius: 20px; line-height: 42px; background-color:#ffff;">
+                                        <i class="bi bi-clipboard2-fill" style="margin-left: 40px; margin-right: 10px; color: #005A9C;"></i>
+                                        Certified Program
+                                    </div>
+                                        <div
                                             style="width: 100%; height: 42px; margin-right: 10px; text-align: center; font-size: 18px; margin-top: 10px;  color: black; border-radius: 20px; line-height: 42px; background-color:#ffff;">
-                                            <i class="bi bi-person" style="margin-right: 20px; color: #005A9C;"></i>
+                                            <i class="bi bi-person" style="margin-left: 12px; margin-right: 10px; color: #005A9C;"></i>
                                             Instructed by
                                         </div>
+
+                                        
 
 
                                         <div class="row" style="margin-top: 20px; margin-left: 10px;">
@@ -330,7 +347,7 @@
                             <a id="registerButton" style="color: white">
                                 <button class="read-more-btn" data-sal-delay="350" data-sal="slide-up"
                                     data-sal-duration="800"
-                                    style="background-color: white; color:  #005A9C; width: 220px; height: 60px; font-size: 18px; padding-left: 30px; display: flex; align-items: center; border-radius: 5px; border: none; cursor: pointer;">
+                                    style="background-color: white; color:  #005A9C; width: 220px; height: 60px; padding-left: 30px; display: flex; align-items: center; border-radius: 5px; border: none; cursor: pointer;">
                                     <div class="card-info" style="display: flex; align-items: center;">
                                         <div class="inner"
                                             style="display: flex; flex-direction: row; align-items: center;">
@@ -922,10 +939,11 @@
             <div class="container eduvibe-animated-shape" style="margin-top: 70px;">
                 <div class="row g-lg-5 g-md-5 g-sm-5">
                     <div class="col-lg-12 col-xl-6">
-                        <div class="gallery-wrapper">
+                        <div class="gallery-wrapper" style="display: flex; justify-content: center;">
                             <img class="image-1" src="assets/images/about/about-08/four.jpg" alt="About Images">
                         </div>
                     </div>
+                    
                     <div class="col-lg-12 col-xl-6 mb--50">
                         <div class="edu-footer-widget">
                             <h3 class="widget-title" style="font-size: 30px;">About the Speaker-</h3>
