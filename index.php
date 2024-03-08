@@ -2,6 +2,12 @@
 <html class="no-js" lang="en">
 
 <head>
+<script>
+      window.onload = function () {
+        var d = new Date().getTime();
+        document.getElementById("tid").value = d;
+      };
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Enark Uplift</title>
@@ -1219,7 +1225,15 @@
         </div> -->
         <div id="popupForm" class="popup-form" style="background-color:  #005A9C; display: none; height: 500px;">
             <span onclick="closeForm()" style="color: white; float: right; cursor: pointer;">&times;</span>
-            <form action="submit_registration.php" method="post">
+            <form  method="post" name="customerData" action="ccavRequestHandler.php">
+            <input type="hidden" name="tid" id="tid" readonly />
+            <input type="hidden" name="merchant_id" value="2342100" />
+            <input type="hidden" name="order_id" value="123654789" />
+            <input type="hidden" name="billing_address" value="Salisbury Park"/>
+            <input type="hidden" name="billing_city" value="Pune"/>
+            <input type="hidden" name="billing_state" value="MH"/>
+            <input type="hidden" name="billing_zip" value="411009"/>
+            <input type="hidden" name="billing_country" value="India"/>
                 <div class="inner text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
                     <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
