@@ -108,11 +108,24 @@
     }
 
     @media (max-width: 768px) {
-        /* Mobile responsive styles */
-        .edu-btn {
-            margin-right: 0;
-        }
+    .edu-btn {
+        text-align: center; /* Align button to the right */
+        margin-left: 0; /* Reset margin for mobile view */
     }
+}
+/* Default margin-bottom for desktop */
+.newsletter-form {
+    margin-bottom: 50px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .newsletter-form {
+        margin-bottom: 100px;
+    }
+}
+
+
 
 
     .popup-form {
@@ -147,6 +160,17 @@
         right: 10px;
         cursor: pointer;
     }
+    .edu-btn {
+    height: 50px;
+    background-color: white;
+    color: #005A9C;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-left: 80px; /* This seems redundant */
+}
 </style>
 
 <body>
@@ -1104,7 +1128,7 @@
                         <h3 class="title text-center" style="margin-top: 50px; color: white;">Registration Form</h3>
                     </div>
                     <div class="newsletter-form newsletter-form-style-1 mt--60 mt_md--30 mt_sm--30 position-relative"
-                        style="margin-bottom: 100px;">
+                        style="margin-bottom: 20px;">
                         <div class="input-box text-start"
                             style="position: relative; margin-bottom: 20px; height: 50px; overflow: hidden; border-radius: 10px;">
                             <input class="large-input-box" type="text" placeholder="Enter your name"
@@ -1118,7 +1142,7 @@
                         </div>
         
                         <div class="input-box text-start"
-                            style="position: relative; height: 50px; border-radius: 10px; margin-bottom: -70px;">
+                            style="position: relative; height: 50px; border-radius: 10px; margin-bottom: 20px;">
                             <input class="large-input-box" type="email" placeholder="Enter your mail address"
                                 style="padding-left: 50px; background-image: url('assets/images/banner/mail\ -\ 01.jpg'); background-repeat: no-repeat; background-position: 10px center; height: 100%;">
                         </div>
