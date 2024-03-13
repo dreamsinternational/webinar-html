@@ -14872,8 +14872,7 @@ Gallery Item
 --------------------------*/
 .banner-style-5 {
   position: relative;
-  z-index: 1;
-  background-image: url(../images/bg/home-five-banner.jpg); }
+  z-index: 1;}
   .banner-style-5 .wrapper {
     height: 860px; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
